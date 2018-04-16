@@ -5,7 +5,8 @@ import './App.css';
 
 let tagStyle = {
   fontSize: 14,
-  color: 'grey'
+  color: 'grey',
+  fontFamily: 'Arial'
 }
 let imgResultsStyle = {
   width: 150
@@ -50,27 +51,22 @@ class App extends Component {
           <ul>
               <li>
                 <img src={this.state.user[0].image} style={imgResultsStyle} />
-                {/* <PhotoResults /> */}
                 <h1 style={tagStyle}>{this.state.user[0].tag}</h1>
               </li>  
               <li>
                 <img src={this.state.user[1].image} style={imgResultsStyle} />
-                {/* <PhotoResults /> */}
                 <h1 style={tagStyle}>{this.state.user[1].tag}</h1>
               </li>
               <li>
                 <img src={this.state.user[2].image} style={imgResultsStyle} />
-                {/* <PhotoResults /> */}
                 <h1 style={tagStyle}>{this.state.user[2].tag}</h1>
               </li>
               <li>
                 <img src={this.state.user[3].image} style={imgResultsStyle} />
-                {/* <PhotoResults /> */}
                 <h1 style={tagStyle}>{this.state.user[3].tag}</h1>
               </li>
               <li>
                 <img src={this.state.user[4].image} style={imgResultsStyle} />
-                {/* <PhotoResults /> */}
                 <h1 style={tagStyle}>{this.state.user[4].tag}</h1>
               </li>
           </ul>           
