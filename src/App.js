@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import SearchField from './SearchField';
-import PhotoResults from './PhotoResults';
+import PhotoList from './PhotoList';
 import './App.css';
 
 let tagStyle = {
@@ -15,7 +15,7 @@ let imgResultsStyle = {
 class App extends Component {
   
   state = {
-    user: [
+    users: [
         {
           tag: 'Kira',
           image: "https://www.dropbox.com/s/797f6j5dcfewanb/kira.jpg?raw=1"
@@ -48,7 +48,8 @@ class App extends Component {
           <SearchField />
         </header>
         <div className="main">
-          <ul>
+          <PhotoList users={this.state.users} />
+          {/* <ul>
               <li>
                 <img src={this.state.user[0].image} style={imgResultsStyle} />
                 <h1 style={tagStyle}>{this.state.user[0].tag}</h1>
@@ -69,7 +70,7 @@ class App extends Component {
                 <img src={this.state.user[4].image} style={imgResultsStyle} />
                 <h1 style={tagStyle}>{this.state.user[4].tag}</h1>
               </li>
-          </ul>           
+          </ul>            */}
         </div>
       </div>
     );
