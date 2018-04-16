@@ -3,29 +3,37 @@ import SearchField from './SearchField';
 import PhotoResults from './PhotoResults';
 import './App.css';
 
+let tagStyle = {
+  fontSize: 14,
+  color: 'grey'
+}
+let imgResultsStyle = {
+  width: 150
+}
+
 class App extends Component {
   
   state = {
     user: [
         {
-          name: 'Kira',
-          image: "https://photos.google.com/search/kira/photo/AF1QipMhLi_qw7Xcr3Kz7skyRspM1GIqIDb2uzOKTSMK"
+          tag: 'Kira',
+          image: "https://www.dropbox.com/s/797f6j5dcfewanb/kira.jpg?raw=1"
         },
         {
-          name: 'Kennedy',
-          image: "https://photos.google.com/search/_cAF1QipO8-RKVh~uP12lO52cg3t2FUwhaIdbx-rjs_Kennedy/photo/AF1QipNEBtHKphJuUcR2z9HjRE3wAlX3r0zrDC4A3QNI"
+          tag: 'Kennedy',
+          image: "https://www.dropbox.com/s/yuw3t8hp3vxf8ma/kennedy.jpg?raw=1"
         },
         {
-          name: 'Hunter',
-          image: "https://photos.google.com/search/_cAF1QipPMXS81RF55nMUkENOU2g-PWBL6ZRFAkIw_Hunter/photo/AF1QipP-t83y13fkCVrb9lvAFEGW2HyQSRwPXc-dHA4p"
+          tag: 'Hunter',
+          image: "https://www.dropbox.com/s/h89hsmxq44wn3h4/hunter.jpg?raw=1"
         },
         {
-          name: 'Lucy',
-          image: "https://photos.google.com/search/_cAF1QipPcNdb5QgOAHsFWJpVlNrXfw47gbv0ha-U_Lucy/photo/AF1QipMrxDuknurySfg0AKxwRIoQRWWZENzW5-GOGTeB"
+          tag: 'Lucy',
+          image: "https://www.dropbox.com/s/nvqmdnpgzrndo5s/lucy.jpg?raw=1"
         },
         {
-          name: 'Crew',
-          image: "https://photos.google.com/search/_cAF1QipNVn~u8KH060CFDnxjls2I7NRjfCw3S98pM_Crew/photo/AF1QipOFM3bWLsyChZOEWBH6H1JLimwlTtA_JyvN3pTH"
+          tag: 'Crew',
+          image: "https://www.dropbox.com/s/hzxgws5hriuakdz/crew.jpg?raw=1"
         }
       ]   
     }
@@ -39,8 +47,33 @@ class App extends Component {
           <SearchField />
         </header>
         <div className="main">
-          <PhotoResults 
-            photos={this.state.user.name} />
+          <ul>
+              <li>
+                <img src={this.state.user[0].image} style={imgResultsStyle} />
+                {/* <PhotoResults /> */}
+                <h1 style={tagStyle}>{this.state.user[0].tag}</h1>
+              </li>  
+              <li>
+                <img src={this.state.user[1].image} style={imgResultsStyle} />
+                {/* <PhotoResults /> */}
+                <h1 style={tagStyle}>{this.state.user[1].tag}</h1>
+              </li>
+              <li>
+                <img src={this.state.user[2].image} style={imgResultsStyle} />
+                {/* <PhotoResults /> */}
+                <h1 style={tagStyle}>{this.state.user[2].tag}</h1>
+              </li>
+              <li>
+                <img src={this.state.user[3].image} style={imgResultsStyle} />
+                {/* <PhotoResults /> */}
+                <h1 style={tagStyle}>{this.state.user[3].tag}</h1>
+              </li>
+              <li>
+                <img src={this.state.user[4].image} style={imgResultsStyle} />
+                {/* <PhotoResults /> */}
+                <h1 style={tagStyle}>{this.state.user[4].tag}</h1>
+              </li>
+          </ul>           
         </div>
       </div>
     );
