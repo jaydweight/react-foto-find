@@ -49,28 +49,6 @@ class App extends Component {
         </header>
         <div className="main">
           <PhotoList users={this.state.users} />
-          {/* <ul>
-              <li>
-                <img src={this.state.user[0].image} style={imgResultsStyle} />
-                <h1 style={tagStyle}>{this.state.user[0].tag}</h1>
-              </li>  
-              <li>
-                <img src={this.state.user[1].image} style={imgResultsStyle} />
-                <h1 style={tagStyle}>{this.state.user[1].tag}</h1>
-              </li>
-              <li>
-                <img src={this.state.user[2].image} style={imgResultsStyle} />
-                <h1 style={tagStyle}>{this.state.user[2].tag}</h1>
-              </li>
-              <li>
-                <img src={this.state.user[3].image} style={imgResultsStyle} />
-                <h1 style={tagStyle}>{this.state.user[3].tag}</h1>
-              </li>
-              <li>
-                <img src={this.state.user[4].image} style={imgResultsStyle} />
-                <h1 style={tagStyle}>{this.state.user[4].tag}</h1>
-              </li>
-          </ul>            */}
         </div>
       </div>
     );
