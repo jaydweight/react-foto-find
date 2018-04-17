@@ -3,15 +3,6 @@ import SearchField from './SearchField';
 import PhotoList from './PhotoList';
 import './App.css';
 
-let tagStyle = {
-  fontSize: 14,
-  color: 'grey',
-  fontFamily: 'Arial'
-}
-let imgResultsStyle = {
-  width: 150
-}
-
 class App extends Component {
   
   state = {

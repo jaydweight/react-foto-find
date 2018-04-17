@@ -6,14 +6,14 @@ let tagStyle = {
     color: 'grey',
     fontFamily: 'Arial'
   }
-  let imgResultsStyle = {
+let imgResultsStyle = {
     width: 150
-  }
+}
 
 const Photo = props => 
     <li>
         <p style={tagStyle}>{props.tag}</p>
-        <img style={imgResultsStyle} src={props.image} />
+        <img style={imgResultsStyle} alt={props.tag} src={props.image} />
     </li>    
 
 Photo.propTypes = {
