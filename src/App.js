@@ -7,7 +7,8 @@ let tagStyle = {
   fontFamily: 'Arial'
 }
 let imgResultsStyle = {
-  width: 150
+  width: 150,
+  marginRight: 8
 }
 
 const photos = [
