@@ -39,9 +39,9 @@ const photos = [
   }
 ]  
 
-function searchingFor(term) {
+function searchingFor(filterText) {
   return function(x) {
-    return x.tag.toLowerCase().includes(term.toLowerCase()) || !term;
+    return x.tag.toLowerCase().includes(filterText.toLowerCase()) || !filterText;
   }
 }
 
@@ -50,18 +50,18 @@ class App extends Component {
     super(props);
     this.state = {
       photos: photos ,
-      term: '',
+      filterText: '',
     }
     this.searchHandler = this.searchHandler.bind(this);
   }
 
   searchHandler(event) {
-    this.setState({ term: event.target.value })
+    this.setState({ filterText: event.target.value })
   }
 
 
   render() {
-    const {term, photos} = this.state;
+    const {filterText, photos} = this.state;
     return (
       <div className="App">
         <header>
@@ -71,13 +71,13 @@ class App extends Component {
             <input type="text" 
                     placeholder="Find foto here..." 
                     onChange={this.searchHandler}
-                    value={term} 
+                    value={filterText} 
             />
           </form>
         </header>
         <div className="main">
             {
-              photos.filter(searchingFor(term)).map(photos => 
+              photos.filter(searchingFor(filterText)).map(photos => 
                 <div key={photos.id}>
                     <p style={tagStyle}>{photos.tag}</p>
                     <img style={imgResultsStyle} alt={photos.tag} src={photos.image} />
