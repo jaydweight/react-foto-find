@@ -1,21 +1,16 @@
 import React, { Component } from 'react';
-import PhotoResults from './PhotoResults';
 
 class SearchField extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-          filterText: '',
-        }
         this.searchHandler = this.searchHandler.bind(this);
     }
 
     searchHandler(event) {
-        this.setState({ filterText: event.target.value })
+        this.props.onFilterTextChange(event.target.value)
       }
 
-  render() {
-    const {filterText} = this.state;      
+  render() {   
     return (
         <div>
             <div>
@@ -26,12 +21,11 @@ class SearchField extends Component {
                     <input type="text" 
                             placeholder="Find foto here..." 
                             onChange={this.searchHandler}
-                            value={filterText} 
+                            value={this.props.filterText} 
                     />
                 </form>
                 </header>
             </div>
-        <PhotoResults />
       </div>
     );
   }
