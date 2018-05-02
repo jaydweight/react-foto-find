@@ -21,16 +21,16 @@ class PhotoResults extends Component {
     const filterText = this.props.filterText;
     const photos = this.props.photos;
     return (
-        <div className="main">
-            {
-                photos.filter(searchingFor(filterText)).map(photos => 
-                    <div key={photos.id}>
-                        <p style={tagStyle}>{photos.tag}</p>
-                        <img style={imgResultsStyle} alt={photos.tag} src={photos.image} />
-                    </div>
-                )
-            }
-        </div>
+      <div className="main">
+        {
+          photos.filter(searchingFor(filterText)).map(photos => 
+            <div key={photos.id}>
+                <p style={tagStyle}>{photos.tag}</p>
+                <img style={imgResultsStyle} alt={photos.tag} src={photos.image} />
+            </div>
+          )
+        }
+      </div> 
     );
   }
 }
